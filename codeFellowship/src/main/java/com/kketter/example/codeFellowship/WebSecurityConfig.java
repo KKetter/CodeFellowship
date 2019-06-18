@@ -38,7 +38,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .cors().disable()
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/codefellowship").permitAll()
+                //add other pages where non logged in users can see below
+                .antMatchers("/home","/registration", "/login").permitAll()
+
                 .anyRequest().authenticated();
 
     }
