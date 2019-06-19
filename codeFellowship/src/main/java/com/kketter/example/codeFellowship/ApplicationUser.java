@@ -12,19 +12,18 @@ public class ApplicationUser {
     Long id;
     String username;
     String password;
-    String firstName;
-    String lastName;
-    //DD/MM/YYYY
+    String firstname;
+    String lastname;
     String dateOfBirth;
     String bio;
 
     public ApplicationUser(){}
 
-    public ApplicationUser(String username, String password, String firstName, String lastName, String dateOfBirth, String bio){
+    public ApplicationUser(String username, String password, String firstname, String lastname, String dateOfBirth, String bio){
         this.username = username;
         this.password = password;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.firstname = firstname;
+        this.lastname = lastname;
         this.dateOfBirth = dateOfBirth;
         this.bio = bio;
     }
@@ -41,12 +40,12 @@ public class ApplicationUser {
         return password;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastname() {
+        return lastname;
     }
 
     public String getDateOfBirth() {
@@ -57,11 +56,3 @@ public class ApplicationUser {
         return bio;
     }
 }
-
-// An ApplicationUser should have a username, password ( hashed using BCrypt),
-// firstName, lastName, dateOfBirth, bio, and any other fields you think are useful.
-// repository?
-//implementation w/o security - start here
-//https://github.com/KKetter/songr/blob/master/src/main/java/com/ketter/stuff/things0/firstWebApp/Album.java
-//https://github.com/KKetter/songr/blob/master/src/main/java/com/ketter/stuff/things0/firstWebApp/AlbumController.java
-//https://github.com/KKetter/songr/blob/master/src/main/java/com/ketter/stuff/things0/firstWebApp/AlbumRepository.java

@@ -6,9 +6,19 @@
 </head>
 <body>
     <h1>Please fill out the form below to join CodeFellowship</h1>
-    <form action="/login" method="POST">
-        UserName<input name="username"/>
-        Password<input name="password"/>
+    <form action="/registration" method="POST">
+        <label for="username">User Name</label>
+            <input name="username" id="username"/>
+        <label for="password">Password</label>
+            <input name="password" id="password"/>
+        <label for="firstname">First Name</label>
+            <input name="firstname" id="firstname"/>
+        <label for="lastname">Last Name</label>
+            <input name="lastname" id="lastname"/>
+        <label for="dateOfBirth">Date of Birth</label>
+            <input name="dateOfBirth" id="dateOfBirth"/>
+        <label for="bio">Bio</label>
+            <input name="bio" id="bio"/>
         <input type="submit" />
     </form>
 </body>

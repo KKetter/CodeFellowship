@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>User Profile</title>
 </head>
-<body>
-    <h1>User Information</h1>
+
+<h1>User Profile</h1>
+<h3 th:text="${ApplicationUser.username}"></h3>
+<h3 th:text="${ApplicationUser.firstName}"></h3>
+<h3 th:text="${ApplicationUser.lastName}"></h3>
+<h3 th:text="${ApplicationUser.dateOfBirth}"></h3>
+<h3 th:text="${ApplicationUser.bio}"></h3>
+
+
 </body>
 </html>
