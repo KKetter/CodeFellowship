@@ -47,7 +47,7 @@ public class CodeFellowshipController {
     @GetMapping("/myprofile")
     public String getMyProfile(Model m, Principal p) {
         ApplicationUser me = applicationUserRepository.findByUsername(p.getName());
-        System.out.print(me);
+        System.out.println("name is" + p.getName());
         m.addAttribute("potato", me);
         return "myprofile";
     }
@@ -66,9 +66,9 @@ public class CodeFellowshipController {
 
     @PostMapping("/registration")
     //parameters define from input form - registration.html
-    public RedirectView createUser(String username, String password, String firstName, String lastName, String dateOfBirth, String bio) {
+    public RedirectView createUser(String username, String password, String firstname, String lastname, String dateOfBirth, String bio) {
         //creating a newUser instance w/ hashed PW
-        ApplicationUser newUser = new ApplicationUser(username, bCryptPasswordEncoder.encode(password), firstName, lastName, dateOfBirth, bio);
+        ApplicationUser newUser = new ApplicationUser(username, bCryptPasswordEncoder.encode(password), firstname, lastname, dateOfBirth, bio);
         //save new user to db using the applicationUserRepository as the middleman, creates sql queries
         applicationUserRepository.save(newUser);
         //logs in the new user automatically after creating - next 2 lines.  creates a token and does some other stuff
