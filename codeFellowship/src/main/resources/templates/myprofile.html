@@ -15,6 +15,17 @@
 <a href="home">CodeFellowship Homepage</a>
 <a href="logout">Logout</a>
 
+<span th:if="${principal}">
+        <h3>Posts!</h3>
+        <a href="postForm">Create Post</a>
+        <span th:if="${hasNoPosts}">
+            <span>You have No Post! Create One!</span>
+        </span>
+        <span th:if="${!hasNoPosts}">
+            <span>You have a post!</span>
+        </span>
+</span>
+
 
 </body>
 </html>

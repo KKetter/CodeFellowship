@@ -47,8 +47,9 @@ public class CodeFellowshipController {
     @GetMapping("/myprofile")
     public String getMyProfile(Model m, Principal p) {
         ApplicationUser me = applicationUserRepository.findByUsername(p.getName());
-        System.out.println("name is" + p.getName());
         m.addAttribute("potato", me);
+        m.addAttribute("hasNoPosts", me.posts.isEmpty());
+        m.addAttribute("principal", p);
         return "myprofile";
     }
     //get user id to display
