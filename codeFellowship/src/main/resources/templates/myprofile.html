@@ -2,15 +2,18 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>User Profile</title>
+    <title>My Profile</title>
 </head>
-
-<h1>User Profile</h1>
+<body>
+<h1>Your Profile</h1>
 <h3 th:text="${potato.username}"></h3>
 <h3 th:text="${potato.firstname}"></h3>
 <h3 th:text="${potato.lastname}"></h3>
 <h3 th:text="${potato.dateOfBirth}"></h3>
 <h3 th:text="${potato.bio}"></h3>
+
+<a href="home">CodeFellowship Homepage</a>
+<a href="logout">Logout</a>
 
 
 </body>
