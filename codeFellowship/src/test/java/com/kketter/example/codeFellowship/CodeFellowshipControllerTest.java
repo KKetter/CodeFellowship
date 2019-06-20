@@ -32,9 +32,11 @@ public class CodeFellowshipControllerTest {
     }
 
     @Test
-    public void testRequestToRootGivesCodeFellowship() throws Exception {
+    public void testRequestTohome() throws Exception {
         mockMvc.perform(get("/home")).andExpect(view().name("home"));
     }
+
+
 
 
 }
