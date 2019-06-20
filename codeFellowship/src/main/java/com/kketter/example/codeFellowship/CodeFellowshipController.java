@@ -55,14 +55,10 @@ public class CodeFellowshipController {
     @GetMapping("/user/{id}")
     public String getUserProfile(@PathVariable long id, Model m, Principal p) {
         ApplicationUser user = applicationUserRepository.findById(id).get();
-        if (user.getId().equals(p.getName())){
-            m.addAttribute("user", user);
-            return "user";
-    } else {
-            throw new UserDoesNotBelongToYouException("That profile can not be referenced w/o sign in");
-        }
-
+        m.addAttribute("potato", user);
+        return "userprofile";
     }
+
 
     @PostMapping("/registration")
     //parameters define from input form - registration.html
