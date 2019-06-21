@@ -15,8 +15,3 @@
 
 </body>
 </html>
-
-public String getUserProfile(@PathVariable long id, Model m) {
-ApplicationUser user = applicationUserRepository.findById(id).get();
-m.addAttribute("potato", user);
-return "userprofile";
